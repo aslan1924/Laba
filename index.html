@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Музычка</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+<link rel="stylesheet" href="jquery.mobile-1.4.2.css" />
+ 
+<link rel="stylesheet" href="nonono.css" />
+<link rel="stylesheet" href="jquery.mobile.icons.min.css" />
+
+<script src="jqm.js"></script>
+<script src="jquery.mobile-1.4.2.js"></script>
+        
+</head>
+<body>
+<!-- page1==================================================================================================================== -->
+<div data-role="page" data-theme="a" id="p1" >
+
+	<div data-role="header">
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">the Rolling stones</a></li>
+			<li><a href="#p2" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">the Queen</a></li>
+			<li><a href="#p3" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">the Beatles</a></li>
+		</ul>
+	</div><!-- /navbar -->
+
+		<p style="text-align: center"><img src="images/11.png"></p>
+				
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+        <a href="#dialog"  class="ui-btn ui-corner-all ui-shadow ui-mini "> Фильмы </a>
+	</div><!-- /content -->
+
+	<div role="main" class="ui-content">
+        <a href="#name"  class="ui-btn ui-corner-all ui-shadow ui-mini "> Имя </a>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<a href="#p2" class="ui-btn ui-corner-all ui-shadow ui-mini">the Queen</a>
+		<a href="#p3" class="ui-btn ui-corner-all ui-shadow ui-mini">the Beatles</a>
+		<a href="#camera" data-transition="slide" data-icon="arrow-r" style="float:right;">Камера</a>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- dialog==================================================================================================================== -->
+<div data-role="page" data-dialog="true" id="dialog" data-close-btn="right">
+
+	<div data-role="header">
+
+		<h1> Фильмы </h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+       <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive">
+     <thead>
+       <tr>
+         <th>the Rolling stones</th>
+         <th>the Queen</th>
+         <th>the Beatles</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td>12 X 5</td>
+         <td>Queen II</td>
+         <td>Please Please Me</td>
+       </tr>
+       <tr>
+         <td>Out of Our Heads</td>
+         <td>Sheer Heart Attack</td>
+         <td>With The Beatles</td>
+       </tr>
+       <tr>
+         <td>Aftermath</td>
+         <td>A Night at the Opera</td>
+         <td>A Hard Day’s Night</td>
+       </tr>
+       <tr>
+         <td>Between the Buttons</td>
+         <td>A Day at the Races</td>
+         <td>Help!</td>
+       </tr>
+       <tr>
+         <td>Beggars Banquet</td>
+         <td>News of the World</td>
+         <td>Revolver</td>
+       </tr>
+       <tr>
+         <td>Let It Bleed</td>
+         <td>Jazz</td>
+         <td>Yellow Submarine</td>
+       </tr>
+       <tr>
+         <td>Sticky Fingers</td>
+         <td>The Game</td>
+         <td>Let It Be</td>
+       </tr>
+  
+     </tbody>
+   </table>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+<!-- name==================================================================================================================== -->
+<div data-role="page" data-dialog="true" id="name" data-close-btn="right">
+
+	<div data-role="header">
+
+		<h1>имя</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+	<canvas id="myName" width="578" height="200"></canvas>
+    <script>
+      var canvas = document.getElementById('myName');
+      var context = canvas.getContext('2d');
+
+      context.strokeStyle = "red";
+      context.lineWidth = 6;
+      context.beginPath();
+
+context.moveTo(105, 100);
+context.lineTo(75, 185);
+context.moveTo(105, 100);
+context.lineTo(135, 185);
+context.moveTo(85, 155);
+context.lineTo(125, 155);
+
+
+context.moveTo(155, 105);
+context.lineTo(155, 185);
+context.moveTo(155, 105);
+context.lineTo(200, 105);
+context.moveTo(200, 185);
+context.lineTo(155, 185);
+
+context.moveTo(240, 100);
+context.lineTo(220, 185);
+context.moveTo(240, 100);
+context.lineTo(260, 185); 
+
+context.moveTo(305, 100); 
+context.lineTo(275, 185); 
+context.moveTo(305, 100);
+context.lineTo(335, 185); 
+context.moveTo(290, 150);
+context.lineTo(325, 150);
+
+context.moveTo(385, 145);
+context.lineTo(345, 145);
+context.moveTo(345, 100);
+context.lineTo(345, 185);
+context.moveTo(385, 100);
+context.lineTo(385, 185);
+
+
+      
+      context.stroke();
+    </script>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+<!-- page2==================================================================================================================== -->
+<div data-role="page" data-theme="a" id="p2">
+
+	<div data-role="header">
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#p1" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">the Rolling stones</a></li>
+			<li><a href="#p2" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">the Queen</a></li>
+			<li><a href="#p3" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">the Beatles</a></li>
+		</ul>
+	</div><!-- /navbar -->
+
+		<p style="text-align: center"><img src="images/22.png"></p>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+        <a href="#dialog"  class="ui-btn ui-corner-all ui-shadow ui-mini "> Фильмы </a>
+	</div><!-- /content -->
+
+<div role="main" class="ui-content">
+        <a href="#name"  class="ui-btn ui-corner-all ui-shadow ui-mini "> Имя </a>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<a href="#p1" class="ui-btn ui-corner-all ui-shadow ui-mini">the Rolling stones</a>
+		<a href="#p3" class="ui-btn ui-corner-all ui-shadow ui-mini">the Beatles</a>
+		<a href="#camera" data-transition="slide" data-icon="arrow-r" style="float:right;">Камера</a>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- page3==================================================================================================================== -->
+<div data-role="page" data-theme="a" id="p3">
+
+	<div data-role="header">
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#p1" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">the Rolling stones</a></li>
+			<li><a href="#p2" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">the Queen</a></li>
+			<li><a href="#p3" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">the Beatles</a></li>
+
+		</ul>
+	</div><!-- /navbar -->
+
+		<p style="text-align: center"><img src="images/33.png"></p>
+	</div><!-- /header -->
+
+<div role="main" class="ui-content">
+        <a href="#dialog"  class="ui-btn ui-corner-all ui-shadow ui-mini "> Фильмы </a>
+	</div><!-- /content -->
+
+<div role="main" class="ui-content">
+        <a href="#name"  class="ui-btn ui-corner-all ui-shadow ui-mini "> Имя </a>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<a href="#p1" class="ui-btn ui-corner-all ui-shadow ui-mini">the Rolling stones</a>
+		<a href="#p2" class="ui-btn ui-corner-all ui-shadow ui-mini">the Queen</a>
+		<a href="#camera" data-transition="slide" data-icon="arrow-r" style="float:right;">Камера</a>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="camera" data-theme="a">
+         <div data-role="header" data-theme="d">
+		
+		</div>
+		<div data-role="main"> 
+		  <script type="text/javascript" charset="utf-8">
+
+var pictureSource; // picture source
+var destinationType; // sets the format of returned value
+
+// Wait for device API libraries to load
+//
+document.addEventListener("deviceready",onDeviceReady,false);
+
+// device APIs are available
+//
+function onDeviceReady() {
+pictureSource=navigator.camera.PictureSourceType;
+destinationType=navigator.camera.DestinationType;
+}
+
+// Called when a photo is successfully retrieved
+//
+function onPhotoDataSuccess(imageData) {
+// Uncomment to view the base64-encoded image data
+// console.log(imageData);
+
+// Get image handle
+//
+var smallImage = document.getElementById('smallImage');
+
+// Unhide image elements
+//
+smallImage.style.display = 'block';
+
+// Show the captured photo
+// The inline CSS rules are used to resize the image
+//
+smallImage.src = "data:image/jpeg;base64," + imageData;
+}
+
+// Called when a photo is successfully retrieved
+//
+function onPhotoURISuccess(imageURI) {
+// Uncomment to view the image file URI
+// console.log(imageURI);
+
+// Get image handle
+//
+var largeImage = document.getElementById('largeImage');
+
+// Unhide image elements
+//
+largeImage.style.display = 'block';
+
+// Show the captured photo
+// The inline CSS rules are used to resize the image
+//
+largeImage.src = imageURI;
+}
+
+// A button will call this function
+//
+function capturePhoto() {
+// Take picture using device camera and retrieve image as base64-encoded string
+navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+destinationType: destinationType.DATA_URL });
+}
+
+
+
+// Called if something bad happens.
+//
+function onFail(message) {
+alert('Failed because: ' + message);
+}
+
+</script>
+
+<button onclick="capturePhoto();">Capture Photo</button> 
+
+<img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+<img style="display:none;" id="largeImage" src="" />
+
+            </div>
+            <div data-role="header">
+				<a href="#p1" data-role="button" class="ui-btn-inline" data-icon="arrow-r" data-transition="slide">К началу </a>
+				</div>
+			</div>
+
+
+
+
+
+
+
+</body>
+</html>
